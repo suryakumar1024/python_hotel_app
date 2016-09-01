@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hotel</title>
+</head>
+<body>
+<h1>Hotel List</h1>
+<table>
+{% for hotels in hotels_list %}
+    <tr>
+    <td><a href="{% url 'check' hotels.id %}"> {{ hotels.hotel_name }} </a></td>
+        <td>&nbsp;&nbsp;&nbsp;</td>
+    <td>{{ hotels.opening_time }}</td>
+        <td>&nbsp;&nbsp;&nbsp;</td>
+    <td>{{ hotels.closing_time }}</td>
+        </tr>
+{% endfor %}
+</table>
+</body>
+</html>
+
